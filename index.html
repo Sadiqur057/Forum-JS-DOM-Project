@@ -4,26 +4,121 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Craze Forum</title>
+  <title>CraZe Forum</title>
 
+  <!-- // linking daisyui and tailwindcss // -->
   <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" href="styles/style.css">
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- //google icons -->
+  <!-- // google icons // -->
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 
 <body>
-  <header></header>
+  <header class="my-3 md:my-8 w-[90%] lg:w-5/6 mx-auto">
+    <!-- navbar start -->
+    <div class="navbar bg-base-100 mb-6">
+      <div class="navbar-start">
+        <div class="dropdown">
+          <div tabindex="0" role="button" class="btn btn-ghost lg:hidden px-0">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+            </svg>
+          </div>
+          <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-40">
+
+            <li>
+              <div class="flex">
+                <div class="p-4 bg-color-bg rounded-full border-[1px] border-c-border mx-auto">
+                  <img class="" src="images/icons/home.svg" alt="">
+                </div>
+                <div class="p-4 bg-color-bg rounded-full border-[1px] border-c-border mx-auto">
+                  <img class="" src="images/icons/edit.svg" alt="">
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="flex">
+                <div class="p-4 bg-color-bg rounded-full border-[1px] border-c-border mx-auto">
+                  <img class="" src="images/icons/add.svg" alt="">
+                </div>
+                <div class="p-4 bg-color-bg rounded-full border-[1px] border-c-border mx-auto">
+                  <img class="" src="images/icons/flag.svg" alt="">
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <a
+          class="btn btn-ghost text-xl md:text-4xl text-c-primary font-Mulish font-black border-[1px] border-dashed border-gray-200 ">CraZe</a>
+      </div>
+      <div class="navbar-end md:mr-3 flex gap-5">
+        <div class="hidden lg:flex gap-4 icons flex-1 justify-end">
+          <div class="p-4 bg-color-bg rounded-full border-[1px] border-c-border">
+            <img class="" src="images/icons/home.svg" alt="">
+          </div>
+          <div class="p-4 bg-color-bg rounded-full border-[1px] border-c-border">
+            <img class="" src="images/icons/edit.svg" alt="">
+          </div>
+          <div class="p-4 bg-color-bg rounded-full border-[1px] border-c-border">
+            <img class="" src="images/icons/add.svg" alt="">
+          </div>
+          <div class="p-4 bg-color-bg rounded-full border-[1px] border-c-border">
+            <img class="" src="images/icons/flag.svg" alt="">
+          </div>
+        </div>
+        <a class="bg-c-button text-white font-bold px-6 py-[10px] md:py-3 rounded-3xl">Sign In</a>
+      </div>
+    </div>
+    <!-- navbar end -->
+
+    <!-- banner start -->
+    <div class="bg-[#12132d] rounded-3xl">
+      <div class=" h-auto py-8 px-3 md:py-12 md:px-10 lg:px-20 lg:py-24 flex justify-between bg-img bg-no-repeat bg-contain bg-bottom">
+        <div class="flex flex-col lg:flex-row flex-1 justify-between gap-6 lg:gap-10 items-center h-full">
+          <div class="text-center lg:text-left text-white">
+            <h1 class="text-3xl md:text-5xl font-black lg:w-4/6 px-10 md:px-20 lg:px-0 banner-content">Welcome to the <span class="bg-gradient-to-r from-indigo-400 to-indigo-600 text-transparent bg-clip-text ">CraZe</span> Forum</h1>
+            <p class="py-6 font-mulish text-[#ffffffcc] text-xl lg:w-4/6">Share your favorite opinion and win and wp forum coffee mug!</p>
+            <div class="flex rounded-3xl max-w-xs md:max-w-[340px] bg-white mx-auto lg:mx-0">
+              <input class="flex-1 px-4 py-3 rounded-3xl outline-none text-c-secondary" type="text" placeholder="Search here anything">
+              <button class="py-2 px-6 bg-c-button rounded-3xl text-white font-bold">Search</button>
+            </div>
+          </div>
+          <div class="card shrink-0 w-[90%] lg:max-w-[340px] shadow-2xl bg-base-100 p-6 md:p-10 h-full mx-auto">
+            <div class="font-mulish text-lg md:text-2xl font-semibold block">
+              <div class="flex justify-between md:pb-2 pb-5">
+                <p>Registered Users</p>
+                <p>152</p>
+              </div>
+              <div class="flex justify-between md:pb-2 pb-5">
+                <p>Forum</p>
+                <p>458</p>
+              </div>
+              <div class="flex justify-between md:pb-2 pb-5">
+                <p>Topics</p>
+                <p>225</p>
+              </div>
+              <div class="flex justify-between">
+                <p>Replies</p>
+                <p>943</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- banner end -->
+  </header>
   <main>
 
   </main>
   <footer>
 
   </footer>
-  <!-- <script src="scripts/tailwind-theme-config.js"></script> -->
+  <script src="scripts/tailwind-theme-config.js"></script>
   <script src="scripts/utility.js"></script>
   <script src="scripts/script.js"></script>
 </body>
