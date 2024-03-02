@@ -57,16 +57,16 @@
       </div>
       <div class="navbar-end md:mr-3 flex gap-5">
         <div class="hidden lg:flex gap-4 icons flex-1 justify-end">
-          <div class="p-4 bg-color-bg rounded-full border-[1px] border-c-border">
+          <div title="home" class="p-4 bg-color-bg rounded-full border-[1px] border-c-border">
             <img class="" src="images/icons/home.svg" alt="">
           </div>
-          <div class="p-4 bg-color-bg rounded-full border-[1px] border-c-border">
+          <div title="edit" class="p-4 bg-color-bg rounded-full border-[1px] border-c-border">
             <img class="" src="images/icons/edit.svg" alt="">
           </div>
-          <div class="p-4 bg-color-bg rounded-full border-[1px] border-c-border">
+          <div title="add" class="p-4 bg-color-bg rounded-full border-[1px] border-c-border">
             <img class="" src="images/icons/add.svg" alt="">
           </div>
-          <div class="p-4 bg-color-bg rounded-full border-[1px] border-c-border">
+          <div title="flag" class="p-4 bg-color-bg rounded-full border-[1px] border-c-border">
             <img class="" src="images/icons/flag.svg" alt="">
           </div>
         </div>
@@ -83,7 +83,8 @@
           <div class="text-center lg:text-left text-white">
             <h1 class="text-3xl md:text-5xl font-black lg:w-4/6 px-10 md:px-20 lg:px-0 banner-content">Welcome to the
               <span class="bg-gradient-to-r from-indigo-400 to-indigo-600 text-transparent bg-clip-text ">CraZe</span>
-              Forum</h1>
+              Forum
+            </h1>
             <p class="py-6 font-mulish text-[#ffffffcc] text-xl lg:w-4/6">Share your favorite opinion and win and wp
               forum coffee mug!</p>
             <div class="flex rounded-3xl max-w-xs md:max-w-[340px] bg-white mx-auto lg:mx-0">
@@ -126,11 +127,13 @@
           app. The integrated testing features allow for a streamlined .</p>
       </div>
 
-      <div class="grid grid-cols-12 gap-4 md:gap-6">
-        <div class="col-span-8">
-          <div class="bg-[#f3f3f5] p-10 rounded-3xl mb-4 md:mb-8 flex md:gap-4 lg:gap-6">
+      <div class="grid grid-cols-12 gap-4 md:gap-6 h-auto">
+        <div class="col-span-8 h-fit">
+          <div class="bg-[#f3f3f5] p-10 rounded-3xl mb-4 md:mb-6 flex md:gap-4 lg:gap-6">
             <div class="bg-white w-16 md:w-[72px] h-16 md:h-[72px] relative rounded-2xl ">
-              <div class="p-1 bg-green-600 rounded-full inline-block absolute -top-[2px] -right-[2px] border-2 border-white"></div>
+              <div
+                class="p-1 bg-green-600 rounded-full inline-block absolute -top-[2px] -right-[2px] border-2 border-white">
+              </div>
             </div>
             <div class="flex-1">
               <div class="flex md:gap-4 lg:gap-6 font-inter font-medium text-[#12132dcc]">
@@ -138,8 +141,39 @@
                 <h4>Author : <span>Awlad Hossain</span></h4>
               </div>
               <div class="border-b-[1px] border-dashed">
-                <h1 class="pt-3 font-bold text-lg md:text-xl text-c-primary">10 Kids Unaware of Their Halloween Costume</h1>
-                <p class="py-4 text-c-secondary">It’s one thing to subject yourself to ha Halloween costume mishap because, hey that’s your prerogative</p>
+                <h1 class="pt-3 font-bold text-lg md:text-xl text-c-primary">10 Kids Unaware of Their Halloween Costume
+                </h1>
+                <p class="py-4 text-c-secondary">It’s one thing to subject yourself to ha Halloween costume mishap
+                  because, hey that’s your prerogative</p>
+              </div>
+              <div class="flex justify-between mt-4 md:mt-6">
+                <div class="flex text-c-secondary gap-3 md:gap-7">
+                  <p><img class="inline-block mr-3" src="images/icons/message.svg" alt=""><span>560</span></p>
+                  <p><img class="inline-block mr-3" src="images/icons/views.svg" alt=""><span>560</span></p>
+                  <p><img class="inline-block mr-3" src="images/icons/duration.svg" alt=""><span>5 min</span></p>
+                </div>
+                <div>
+                  <a href=""><img class="inline-block mr-3" src="images/icons/save.svg" alt=""></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-[#f3f3f5] p-10 rounded-3xl mb-4 md:mb-6 flex md:gap-4 lg:gap-6">
+            <div class="bg-white w-16 md:w-[72px] h-16 md:h-[72px] relative rounded-2xl ">
+              <div
+                class="p-1 bg-green-600 rounded-full inline-block absolute -top-[2px] -right-[2px] border-2 border-white">
+              </div>
+            </div>
+            <div class="flex-1">
+              <div class="flex md:gap-4 lg:gap-6 font-inter font-medium text-[#12132dcc]">
+                <h4># <span>Music</span></h4>
+                <h4>Author : <span>Awlad Hossain</span></h4>
+              </div>
+              <div class="border-b-[1px] border-dashed">
+                <h1 class="pt-3 font-bold text-lg md:text-xl text-c-primary">10 Kids Unaware of Their Halloween Costume
+                </h1>
+                <p class="py-4 text-c-secondary">It’s one thing to subject yourself to ha Halloween costume mishap
+                  because, hey that’s your prerogative</p>
               </div>
               <div class="flex justify-between mt-4 md:mt-6">
                 <div class="flex text-c-secondary gap-3 md:gap-7">
@@ -155,22 +189,38 @@
           </div>
 
         </div>
-        <div class="col-span-4 bg-color-bg p-4 md:p-6 rounded-3xl">
+        <div class="col-span-4 bg-color-bg p-4 md:p-6 rounded-3xl h-fit">
           <div>
             <div class="flex justify-between mb-3 md:mb-5">
               <h4 class="font-bold text-lg md:text-xl">Title</h4>
-              <p class="text-c-secondary"><img class="inline-block mr-1" src="images/icons/double-click.svg" alt="">Mark as read (<span>1</span>)</p>
+              <p class="text-c-secondary"><img class="inline-block mr-1" src="images/icons/double-click.svg" alt="">Mark
+                as read (<span>1</span>)</p>
             </div>
             <div class="flex justify-between p-4 md:p-6 bg-white shadow-sm rounded-xl">
               <h4 class="font-bold text-c-primary ">10 Kids Unaware of Their Halloween Costume</h4>
               <div class="self-center">
-                <p class="w-[60px] flex justify-between "><img class="inline-block mr-2" src="images/icons/views.svg" alt=""><span class="text-right">560</span></p>
+                <p class="w-[60px] flex justify-between "><img class="inline-block mr-2" src="images/icons/views.svg"
+                    alt=""><span class="text-right">560</span></p>
               </div>
             </div>
           </div>
         </div>
       </div>
 
+    </section>
+
+    <section class="w-[90%] md:w-5/6 mx-auto my-20">
+      <div class="flex flex-col-reverse lg:flex-row bg-black">
+        <div class="py-10 lg:py-20 px-6 lg:pl-20   text-center lg:text-left">
+          <h1 class="text-white text-4xl font-black">Join Our Form</h1>
+          <p class="text-c-secondary font-medium md:text-lg my-4 md:my-5">Share your favorite opinion and win and wp forum coffee mug! Yes, you can run unit tests and view the
+            results directly within the app.</p>
+          <button class="bg-c-button text-white font-bold px-6 py-[10px] md:py-3 rounded-3xl">Registered Now</button>
+        </div>
+        <div class="pt-10 lg:pt-20 pr-3 ">
+          <img class="w-1/2 md:w-1/3 lg:w-full mx-auto" src="images/joinforum.png" alt="">
+        </div>
+      </div>
     </section>
 
   </main>
