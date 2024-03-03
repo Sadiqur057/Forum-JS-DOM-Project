@@ -32,7 +32,7 @@ const displayData = (posts) => {
           <h4># <span>${post?.category || "unknown"}</span></h4>
           <h4>Author : <span>${post?.author?.name || "unknown"}</span></h4>
         </div>
-        <div class="border-b-[1px] border-dashed">
+        <div class="border-b-[1px] lg:border-b-[2px] border-dashed border-[#12132d28]">
           <h1 class="pt-3 font-bold text-lg md:text-xl text-c-primary">${
             post?.title || "Not Specified"
           }</h1>
@@ -40,13 +40,13 @@ const displayData = (posts) => {
             post?.description || "Not Specified"
           }</p>
         </div>
-        <div class="flex justify-between mt-3 md:mt-6 items-end ">
-          <div class="grid grid-cols-3 text-c-secondary gap-[6px] md:gap-7 text-sm md:text-base">
-            <p><img class="inline-block  mr-[6px] md:mr-3 w-[14px] md:w-5" src="images/icons/message.svg"
+        <div class="flex justify-between mt-3 md:mt-5 items-end ">
+          <div class="flex text-c-secondary  gap-3 md:gap-7 text-sm md:text-base">
+            <p class=' flex-grow-0'><img class="inline-block  mr-[6px] md:mr-3 w-[14px] md:w-5" src="images/icons/message.svg"
                 alt=""><span>${post?.comment_count || 0}</span></p>
-            <p><img class="inline-block mr-[6px] md:mr-3 w-4 md:w-5" src="images/icons/views.svg"
+            <p class=' flex-grow-2'><img class="inline-block mr-[6px] md:mr-3 w-4 md:w-5" src="images/icons/views.svg"
                 alt=""><span>${post?.view_count || 0}</span></p>
-            <p><img class="inline-block  mr-[6px] md:mr-3 w-4 md:w-5" src="images/icons/duration.svg" alt=""><span>${
+            <p class=' flex-grow-2 '><img class="inline-block  mr-[6px] md:mr-3 w-4 md:w-5" src="images/icons/duration.svg" alt=""><span>${
               post?.posted_time
             }</span> min</p>
           </div>
@@ -115,8 +115,8 @@ const displayNews = (allNews) => {
             <img class="w-10 h-10 rounded-full" src="${news?.profile_image}" alt="Profile Picture">
           </div>
           <div>
-            <h4 class="font-bold">${news?.author?.name || 'unknown'}</h4>
-            <p class="text-c-secondary text-sm">${news?.author?.designation || 'unknown'}</p>
+            <h4 class="font-bold">${news?.author?.name || 'Unknown'}</h4>
+            <p class="text-c-secondary text-sm">${news?.author?.designation || 'Unknown'}</p>
           </div>
         </div>
       </div>
