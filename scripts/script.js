@@ -1,8 +1,13 @@
 let readPostCount = 0;
-const loadPost = async () => {
-  const res = await fetch(
-    "https://openapi.programming-hero.com/api/retro-forum/posts"
-  );
+const loadPost = async (categoryName) => {
+  showElementById('loading-spinner');
+  let url;
+  if(categoryName){
+    url = `https://openapi.programming-hero.com/api/retro-forum/posts?category=${categoryName}`
+  }else{
+    url = `https://openapi.programming-hero.com/api/retro-forum/posts`
+  }
+  const res = await fetch(url);
   const data = await res.json();
   displayData(data.posts);
 };
@@ -10,7 +15,10 @@ loadPost();
 
 const displayData = (posts) => {
   const postContainer = document.getElementById("post-container");
+  postContainer.textContent = '';
   posts.forEach((post,index) => {
+    const title = post.title.replace(/'/g, "\\'");
+    console.log(title)
     let innerHTML = `          
     <div class="bg-[#f3f3f5] p-4 md:p-6 lg:p-10 rounded-3xl mb-4 md:mb-6 flex gap-3 lg:gap-6">
       <div class=" w-10 md:w-[72px] h-10 md:h-[72px] relative rounded-md ">
@@ -43,7 +51,7 @@ const displayData = (posts) => {
             }</span> min</p>
           </div>
           <div>
-            <button onclick="markRead('${post.title}',${
+            <button onclick="markRead('${title}',${
       post.view_count
     })"><img class="inline-block mr-3" src="images/icons/save.svg" alt=""></button>
           </div>
@@ -58,11 +66,10 @@ const displayData = (posts) => {
     
     
   });
-  console.log(document.querySelectorAll('.is-active'))
+    hideElementById('loading-spinner');
 };
 
 const markRead = (title, view_count) => {
-  // console.log(title,view_count);
   readPostCount += 1;
   const element = document.getElementById('read-post-count');
   element.textContent = readPostCount;
@@ -81,6 +88,7 @@ const markRead = (title, view_count) => {
 
 
 const loadNews = async () => {
+  showElementById('loading-spinner-post');
   const res = await fetch(
     "https://openapi.programming-hero.com/api/retro-forum/latest-posts"
   );
@@ -97,12 +105,12 @@ const displayNews = (allNews) => {
     <div class="card bg-base-100 border-[1px] border-c-border font-mulish">
       <figure class="px-4 md:px-6 pt-4 md:pt-6"><img class="rounded-xl"
           src="${news.cover_image}" /></figure>
-      <div class="card-body">
+      <div class="card-body px-5 md:px-6">
         <p class="text-c-secondary flex items-center gap-2"><img class="w-5" src="images/icons/date.svg"
             alt=""><span class="font-mulish">${news?.author?.posted_date || "No publish date"}</span></p>
         <h2 class="text-lg font-extrabold leading-snug">${news?.title || 'Not Specified'}</h2>
-        <p class="font-mulish text-c-secondary leading-5">${news?.description || 'Not Specified'}</p>
-        <div class="flex gap-4 mt-1 md:mt-2">
+        <p class="font-mulish text-c-secondary leading-6">${news?.description || 'Not Specified'}</p>
+        <div class="flex gap-4 mt-2 md:mt-2">
           <div>
             <img class="w-10 h-10 rounded-full" src="${news?.profile_image}" alt="Profile Picture">
           </div>
@@ -116,5 +124,14 @@ const displayNews = (allNews) => {
     `
     newsContainer.innerHTML += innerHTML;
   });
-  
+
+    hideElementById('loading-spinner-post');
 };
+
+
+document.getElementById('search-button').addEventListener('click', ()=>{
+  const element = document.getElementById('search-box');
+  const text = element.value;
+  loadPost(text);
+})
+
