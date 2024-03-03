@@ -11,13 +11,16 @@
   <link rel="stylesheet" href="styles/style.css">
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- // google icons // -->
+  <!-- // google icons configuration // -->
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+  <!-- // font awesome icons configuration -->
+  <script src="https://kit.fontawesome.com/1104488063.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-  <header class="my-3 md:my-8 w-[90%] lg:w-5/6 mx-auto">
+  <header class="my-3 md:my-8 w-[92%] lg:w-5/6 mx-auto">
     <!-- navbar start -->
     <div class="navbar bg-base-100 mb-6">
       <div class="navbar-start">
@@ -32,20 +35,20 @@
 
             <li>
               <div class="flex">
-                <div class="p-4 bg-color-bg rounded-full border-[1px] border-c-border mx-auto">
+                <div title="home" class="p-4 bg-color-bg rounded-full border-[1px] border-c-border mx-auto">
                   <img class="" src="images/icons/home.svg" alt="">
                 </div>
-                <div class="p-4 bg-color-bg rounded-full border-[1px] border-c-border mx-auto">
+                <div title="edit" class="p-4 bg-color-bg rounded-full border-[1px] border-c-border mx-auto">
                   <img class="" src="images/icons/edit.svg" alt="">
                 </div>
               </div>
             </li>
             <li>
               <div class="flex">
-                <div class="p-4 bg-color-bg rounded-full border-[1px] border-c-border mx-auto">
+                <div  title="add" class="p-4 bg-color-bg rounded-full border-[1px] border-c-border mx-auto">
                   <img class="" src="images/icons/add.svg" alt="">
                 </div>
-                <div class="p-4 bg-color-bg rounded-full border-[1px] border-c-border mx-auto">
+                <div title="mark" class="p-4 bg-color-bg rounded-full border-[1px] border-c-border mx-auto">
                   <img class="" src="images/icons/flag.svg" alt="">
                 </div>
               </div>
@@ -53,7 +56,7 @@
           </ul>
         </div>
         <a
-          class="btn btn-ghost text-xl md:text-4xl text-c-primary font-Mulish font-black border-[1px] border-dashed border-gray-200 ">CraZe</a>
+          class="btn btn-ghost text-2xl md:text-4xl text-c-primary font-Mulish font-black ">CraZe</a>
       </div>
       <div class="navbar-end md:mr-3 flex gap-5">
         <div class="hidden lg:flex gap-4 icons flex-1 justify-end">
@@ -66,11 +69,11 @@
           <div title="add" class="p-4 bg-color-bg rounded-full border-[1px] border-c-border">
             <img class="" src="images/icons/add.svg" alt="">
           </div>
-          <div title="flag" class="p-4 bg-color-bg rounded-full border-[1px] border-c-border">
+          <div title="mark" class="p-4 bg-color-bg rounded-full border-[1px] border-c-border">
             <img class="" src="images/icons/flag.svg" alt="">
           </div>
         </div>
-        <a class="bg-c-button text-white font-bold px-6 py-[10px] md:py-3 rounded-3xl">Sign In</a>
+        <a class="bg-c-button text-white font-bold px-6 py-[10px] md:py-3 rounded-3xl button">Sign In</a>
       </div>
     </div>
     <!-- navbar end -->
@@ -78,32 +81,32 @@
     <!-- banner start -->
     <div class="bg-[#12132d] rounded-3xl">
       <div
-        class=" h-auto py-8 px-3 md:py-12 md:px-10 lg:px-20 lg:py-24 flex justify-between bg-img bg-no-repeat bg-cover bg-bottom">
+        class=" h-auto py-10 px-3 md:py-12 md:px-10 lg:px-20 lg:py-24 flex justify-between bg-img bg-no-repeat bg-cover bg-bottom">
         <div class="flex flex-col lg:flex-row flex-1 justify-between gap-6 lg:gap-10 items-center h-full">
           <div class="text-center lg:text-left text-white">
-            <h1 class="text-3xl md:text-5xl font-black lg:w-4/6 px-10 md:px-20 lg:px-0 banner-content">Welcome to the
+            <h1 class="text-[34px] md:text-5xl font-black lg:w-4/6 px-2 md:px-20 lg:px-0 banner-content">Welcome to the
               <span class="bg-gradient-to-r from-indigo-400 to-indigo-600 text-transparent bg-clip-text ">CraZe</span>
               Forum
             </h1>
-            <p class="py-6 font-mulish text-[#ffffffcc] text-xl lg:w-4/6">Share your favorite opinion and win and wp
+            <p class="py-6 font-mulish text-[#ffffffcc] md:text-xl lg:w-4/6 px-4 md:px-0">Share your favorite opinion and win and wp
               forum coffee mug!</p>
-            <div class="flex rounded-3xl max-w-xs md:max-w-[340px] bg-white mx-auto lg:mx-0">
-              <input class="flex-1 px-4 py-3 rounded-3xl outline-none text-c-secondary" type="text"
+            <div class="flex items-center rounded-3xl w-full md:max-w-[340px] bg-white mx-auto lg:mx-0">
+              <input id="search-box" class="w-[70%] md:w-full flex-1 px-4 py-3 rounded-3xl outline-none text-c-secondary" type="text"
                 placeholder="Search here anything">
-              <button class="py-2 px-6 bg-c-button rounded-3xl text-white font-bold">Search</button>
+              <button id="search-button" class="py-2 mr-1 h-fit px-6 bg-c-button rounded-3xl text-white font-bold">Search</button>
             </div>
           </div>
-          <div class="card shrink-0 w-[90%] lg:max-w-[340px] shadow-2xl bg-base-100 p-6 md:p-10 h-full mx-auto">
-            <div class="font-mulish text-lg md:text-2xl font-semibold block">
-              <div class="flex justify-between md:pb-2 pb-5">
+          <div class="card shrink-0 w-[95%] lg:max-w-[340px] shadow-2xl bg-base-100 p-6 md:p-10 h-full ">
+            <div class="font-mulish md:text-2xl font-semibold block">
+              <div class="flex justify-between md:pb-5 pb-2">
                 <p>Registered Users</p>
                 <p>152</p>
               </div>
-              <div class="flex justify-between md:pb-2 pb-5">
+              <div class="flex justify-between md:pb-5 pb-2">
                 <p>Forum</p>
                 <p>458</p>
               </div>
-              <div class="flex justify-between md:pb-2 pb-5">
+              <div class="flex justify-between md:pb-5 pb-2">
                 <p>Topics</p>
                 <p>225</p>
               </div>
@@ -122,15 +125,17 @@
 
     <section class="w-[90%] md:w-5/6 mx-auto">
       <div class="text-center py-5 md:py-10 w-[90%] lg:w-1/2 mx-auto">
-        <h1 class="font-black text-c-primary text-4xl md:pb-2">Let's Discuss</h1>
-        <p class="md:text-lg text-c-secondary py-3">Yes, you can run unit tests and view the results directly within the
-          app. The integrated testing features allow for a streamlined .</p>
+        <h1 class="font-black text-c-primary text-4xl pb-2">Let's Discuss</h1>
+        <p class="md:text-lg text-c-secondary py-3">Uncover a wealth of knowledge and ignite your passions by exploring diverse forum posts. Step inside the minds of passionate individuals.</p>
+      </div>
+
+      <div id="loading-spinner" class="text-center mb-10 md:mb-16 hidden">
+        <span class="loading loading-dots loading-lg"></span>
       </div>
 
       <div class="grid grid-cols-12 gap-4 md:gap-6 h-auto">
+        
         <div id="post-container" class="col-span-12 lg:col-span-8 h-fit">
-
-
 
         </div>
 
@@ -151,26 +156,27 @@
 
     </section>
 
-    <section class="w-[90%] md:w-5/6 mx-auto my-20">
-      <div class="flex flex-col-reverse lg:flex-row bg-c-primary rounded-3xl">
-        <div class="py-10 lg:py-20 px-6 lg:pl-20   text-center lg:text-left">
-          <h1 class="text-white text-4xl font-black">Join Our Form</h1>
+    <section class="w-[90%] md:w-5/6 mx-auto py-8 md:py-12 lg:my-14">
+      <div class="flex flex-col-reverse lg:flex-row bg-c-primary rounded-3xl gap-6 lg:gap-32 p-6 md:p-12 lg:p-20 items-center">
+        <div class="text-center lg:text-left">
+          <h1 class="text-white text-4xl font-black">Join Our Forum</h1>
           <p class="text-c-secondary font-medium md:text-lg my-4 md:my-5">Share your favorite opinion and win and wp
-            forum coffee mug! Yes, you can run unit tests and view the
-            results directly within the app.</p>
+            forum coffee mug! and,  connect with fellow enthusiasts in our vibrant online forum.</p>
           <button class="bg-c-button text-white font-bold px-6 py-[10px] md:py-3 rounded-3xl">Registered Now</button>
         </div>
-        <div class="pt-10 lg:pt-20 pr-3 ">
-          <img class="w-1/2 md:w-1/3 lg:w-full mx-auto" src="images/joinforum.png" alt="">
+        <div class="w-40% lg:w-50%">
+          <img class="lg:w-full md:w-1/2 w-3/5 mx-auto self-center" src="images/joinforum.png" alt="">
         </div>
       </div>
     </section>
 
-    <section class="w-[90%] md:w-5/6 mx-auto">
-      <div class="text-center md:py-5 w-[90%] lg:w-1/2 mx-auto">
-        <h1 class="font-black text-c-primary text-4xl md:pb-2">Latest Posts</h1>
-        <p class="md:text-lg text-c-secondary py-3">Yes, you can run unit tests and view the results directly within the
-          app. The integrated testing features allow for a streamlined .</p>
+    <section class="w-[90%] md:w-5/6 mx-auto mb-6 lg:mb-20">
+      <div class="text-center md:pb-5 w-[90%] lg:w-1/2 mx-auto">
+        <h1 class="font-black text-c-primary text-4xl pb-2">Latest Posts</h1>
+        <p class="md:text-lg text-c-secondary py-3">Let's curates the most significant stories, allowing you to explore headlines and delve deeper into the topics that spark your curiosity.</p>
+      </div>
+      <div id="loading-spinner-post" class="text-center mb-2 md:mb-4 hidden">
+        <span class="loading loading-dots loading-lg"></span>
       </div>
 
       <div id="news-container" class="py-3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -184,34 +190,23 @@
 
 
   </main>
-  <footer class="text-center p-10 md:p-12 lg:p20 bg-base-200 text-base-content rounded mt-3 md:mt-10">
-    <h1 class=" font-black text-2xl md:text-4xl ">Craze Forum</h1>
-    <p class="py-4 text-c-secondary w-[90%] lg:w-1/2 mx-auto">Contrary to popular belief, Lorem Ipsum is not simply
-      random text. It has roots in a piece of classical Latin literature from 45 BC</p>
-    <nav class="border-b-[1px] border-dashed border-c-border">
-      <div class="flex justify-center gap-6  pb-4">
-        <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current">
-            <path
-              d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z">
-            </path>
-          </svg></a>
-        <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current">
-            <path
-              d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z">
-            </path>
-          </svg></a>
-        <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current">
-            <path
-              d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z">
-            </path>
-          </svg></a>
+  <footer class="text-center p-10 md:p-12 lg:p-20 bg-base-200 text-base-content rounded mt-3 md:mt-10">
+    <h1 class=" font-black text-2xl md:text-5xl ">Craze</h1>
+    <p class="pt-3 md:pt-5 pb-4 md:pb-8 text-[#12132db3] w-[99%] lg:w-1/2 mx-auto font-mulish ">Always curious, forever exploring. Dive deeper into the craze with our CraZe Forum.</p>
+    <nav class="border-b-[1px] border-[#30325e1a] border-c-border">
+      <div class="flex justify-center gap-6 md:gap-8  pb-4 mb-4 md:mb-8">
+        <a class="text-2xl"><i class="fa-brands fa-twitter"></i></a>
+        <a class="text-2xl"><i class="fa-brands fa-facebook-f"></i></a>
+        <a class="text-2xl"><i class="fa-brands fa-instagram"></i></a>
+        <a class="text-2xl"><i class="fa-brands fa-github"></i></a>
       </div>
     </nav>
-    <aside>
-      <p class="text-[#12132d80] mt-4">Copyright © 2024 - All right reserved by ACME Industries Ltd</p>
+    <aside class="mt-4 md:mt-10">
+      <p class="text-[#12132d80] mt-4">Copyright © 2024 - All right reserved</p>
     </aside>
   </footer>
   <script src="scripts/tailwind-theme-config.js"></script>
+  <script src="scripts/utility.js"></script>
   <script src="scripts/script.js"></script>
 </body>
 
