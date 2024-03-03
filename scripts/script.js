@@ -1,15 +1,14 @@
 let readPostCount = 0;
-const loadData = async () => {
+const loadPost = async () => {
   const res = await fetch(
     "https://openapi.programming-hero.com/api/retro-forum/posts"
   );
   const data = await res.json();
   displayData(data.posts);
 };
-loadData();
+loadPost();
 
 const displayData = (posts) => {
-  // console.log(posts);
   const postContainer = document.getElementById("post-container");
   posts.forEach((post,index) => {
     let innerHTML = `          
@@ -78,4 +77,44 @@ const markRead = (title, view_count) => {
 </div>
   `;
   readPostContainer.innerHTML += innerHTML;
+};
+
+
+const loadNews = async () => {
+  const res = await fetch(
+    "https://openapi.programming-hero.com/api/retro-forum/latest-posts"
+  );
+  const data = await res.json();
+  displayNews(data);
+};
+loadNews();
+
+const displayNews = (allNews) => {
+  const newsContainer = document.getElementById("news-container");
+  console.log(newsContainer)
+  allNews.forEach((news) => {
+    let innerHTML = `
+    <div class="card bg-base-100 border-[1px] border-c-border font-mulish">
+      <figure class="px-4 md:px-6 pt-4 md:pt-6"><img class="rounded-xl"
+          src="${news.cover_image}" /></figure>
+      <div class="card-body">
+        <p class="text-c-secondary flex items-center gap-2"><img class="w-5" src="images/icons/date.svg"
+            alt=""><span class="font-mulish">${news?.author?.posted_date || "No publish date"}</span></p>
+        <h2 class="text-lg font-extrabold leading-snug">${news?.title || 'Not Specified'}</h2>
+        <p class="font-mulish text-c-secondary leading-5">${news?.description || 'Not Specified'}</p>
+        <div class="flex gap-4 mt-1 md:mt-2">
+          <div>
+            <img class="w-10 h-10 rounded-full" src="${news?.profile_image}" alt="Profile Picture">
+          </div>
+          <div>
+            <h4 class="font-bold">${news?.author?.name || 'unknown'}</h4>
+            <p class="text-c-secondary text-sm">${news?.author?.designation || 'unknown'}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    `
+    newsContainer.innerHTML += innerHTML;
+  });
+  
 };
