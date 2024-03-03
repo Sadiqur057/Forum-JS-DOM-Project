@@ -128,56 +128,22 @@
       </div>
 
       <div class="grid grid-cols-12 gap-4 md:gap-6 h-auto">
-        <div class="col-span-12 lg:col-span-8 h-fit">
-          <div class="bg-[#f3f3f5] p-4 md:p-6 lg:p-10 rounded-3xl mb-4 md:mb-6 flex gap-4 lg:gap-6">
-            <div class="bg-white w-8 md:w-[72px] h-8 md:h-[72px] relative rounded-md ">
-              <div
-                class="p-1 bg-green-600 rounded-full inline-block absolute -top-[2px] -right-[2px] border-2 border-white">
-              </div>
-            </div>
-            <div class="flex-1">
-              <div class="flex flex-col md:flex-row md:gap-4 lg:gap-6 font-inter font-medium text-[#12132dcc]">
-                <h4># <span>Music</span></h4>
-                <h4>Author : <span>Awlad Hossain</span></h4>
-              </div>
-              <div class="border-b-[1px] border-dashed">
-                <h1 class="pt-3 font-bold text-lg md:text-xl text-c-primary">10 Kids Unaware of Their Halloween Costume
-                </h1>
-                <p class="py-3 md:py-4 text-c-secondary">It’s one thing to subject yourself to ha Halloween costume
-                  mishap
-                  because, hey that’s your prerogative</p>
-              </div>
-              <div class="flex justify-between mt-3 md:mt-6 items-end ">
-                <div class="grid grid-cols-3 text-c-secondary gap-[6px] md:gap-7 text-sm md:text-base">
-                  <p><img class="inline-block  mr-2 md:mr-3 w-[14px] md:w-5" src="images/icons/message.svg"
-                      alt=""><span>560</span></p>
-                  <p><img class="inline-block mr-2 md:mr-3 w-4 md:w-5" src="images/icons/views.svg"
-                      alt=""><span>560</span></p>
-                  <p><img class="inline-block  mr-2 md:mr-3 w-4 md:w-5" src="images/icons/duration.svg" alt=""><span>5
-                      min</span></p>
-                </div>
-                <div>
-                  <a href=""><img class="inline-block mr-3" src="images/icons/save.svg" alt=""></a>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div id="post-container" class="col-span-12 lg:col-span-8 h-fit">
+
 
 
         </div>
+
+        <!-- mark as read history -->
         <div class="col-span-12 lg:col-span-4 bg-color-bg p-4 md:p-6 rounded-3xl h-fit">
           <div>
-            <div class="flex justify-between mb-3 md:mb-5">
+            <div class="flex justify-between ">
               <h4 class="font-bold text-lg md:text-xl">Title</h4>
               <p class="text-c-secondary"><img class="inline-block mr-1" src="images/icons/double-click.svg" alt="">Mark
-                as read (<span>1</span>)</p>
+                as read (<span id="read-post-count">0</span>)</p>
             </div>
-            <div class="flex justify-between p-4 md:p-6 bg-white shadow-sm rounded-xl">
-              <h4 class="font-bold text-c-primary ">10 Kids Unaware of Their Halloween Costume</h4>
-              <div class="self-center">
-                <p class="w-[60px] flex justify-between "><img class="inline-block mr-2" src="images/icons/views.svg"
-                    alt=""><span class="text-right">560</span></p>
-              </div>
+            <div id="read-post-container">
+
             </div>
           </div>
         </div>
@@ -207,29 +173,9 @@
           app. The integrated testing features allow for a streamlined .</p>
       </div>
 
-      <div class="py-3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-        <div class="card bg-base-100 border-[1px] border-c-border font-mulish">
-          <figure class="px-4 md:px-6 pt-4 md:pt-6"><img class="rounded-xl"
-              src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
-          <div class="card-body">
-            <p class="text-c-secondary flex items-center gap-2"><img class="w-5" src="images/icons/date.svg"
-                alt=""><span class="font-mulish">29 January 2024</span></p>
-            <h2 class="text-lg font-extrabold leading-snug my-1">What will a mars habitat force that impact in our daily
-              life!!!</h2>
-            <p class="font-mulish text-c-secondary leading-5">Yes, you can run unit tests and view the results directly
-              within the app. </p>
-            <div class="flex gap-4 mt-2 md:mt-3">
-              <div>
-                <img src="images/user.png" alt="">
-              </div>
-              <div>
-                <h4 class="font-bold">Cameron Williamson</h4>
-                <p class="text-c-secondary text-sm">Unknown</p>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div id="news-container" class="py-3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
 
+       
       </div>
 
 
@@ -240,20 +186,32 @@
   </main>
   <footer class="text-center p-10 md:p-12 lg:p20 bg-base-200 text-base-content rounded mt-3 md:mt-10">
     <h1 class=" font-black text-2xl md:text-4xl ">Craze Forum</h1>
-    <p class="py-4 text-c-secondary w-[90%] lg:w-1/2 mx-auto">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC</p>
+    <p class="py-4 text-c-secondary w-[90%] lg:w-1/2 mx-auto">Contrary to popular belief, Lorem Ipsum is not simply
+      random text. It has roots in a piece of classical Latin literature from 45 BC</p>
     <nav class="border-b-[1px] border-dashed border-c-border">
       <div class="flex justify-center gap-6  pb-4">
-        <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></svg></a>
-        <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path></svg></a>
-        <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path></svg></a>
+        <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current">
+            <path
+              d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z">
+            </path>
+          </svg></a>
+        <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current">
+            <path
+              d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z">
+            </path>
+          </svg></a>
+        <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current">
+            <path
+              d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z">
+            </path>
+          </svg></a>
       </div>
-    </nav> 
+    </nav>
     <aside>
       <p class="text-[#12132d80] mt-4">Copyright © 2024 - All right reserved by ACME Industries Ltd</p>
     </aside>
   </footer>
   <script src="scripts/tailwind-theme-config.js"></script>
-  <script src="scripts/utility.js"></script>
   <script src="scripts/script.js"></script>
 </body>
 
