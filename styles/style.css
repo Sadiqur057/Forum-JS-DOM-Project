@@ -18,8 +18,12 @@ h1,h2,h3,h4,h5, .font-mulish, .font-mulish p{
   line-height: 60px !important;
 }
 
+button, .button{
+  cursor: pointer;
+}
+
 @media screen and (max-width:640px) {
   .banner-content{
-    line-height: 50px !important;
+    line-height: 42px !important;
   }
 }
